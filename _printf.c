@@ -1,4 +1,8 @@
-#imclude "main.h"
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
+#include <limits.h>
 /**
  * print_buffer - Prints the content of the buffer,
  * if it exists.

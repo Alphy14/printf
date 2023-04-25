@@ -41,7 +41,7 @@ typedef struct fmt fmt_t;
 int print_char(va_list types, char buffer[], int flags,
 		int width, int precision, int size);
 
-int print_percent(va_list types, char buffer[], int flags
+int print_percent(va_list types, char buffer[], int flags,
 		int width, int precision, int size);
 
 int print_string(va_list types, char buffer[], int flags,
@@ -58,6 +58,9 @@ int print_unsigned(va_list types, char buffer[], int flags,
 		int width, int precision, int size);
 
 int print_octal(va_list types, char buffer[], int flags,
+		int width, int precision, int size);
+
+int print_hexadecimal(va_list types, char buffer[], int flags,
 		int width, int precision, int size);
 
 int print_hexa_upper(va_list types, char buffer[],
@@ -84,7 +87,7 @@ int print_reverse(va_list types, char buffer[], int flags,
 		int width, int precision, int size);
 
 /* FUNCTION TO PRINT A STRING IN ROT13 */
-int print_rot13string(va_list types, char buffer[]
+int print_rot13string(va_list types, char buffer[],
 		int flags, int width, int precision,
 		int size);
 
@@ -99,7 +102,7 @@ int write_num(int ind, char buffer[], int flags,
 		int width, int precision, int length,
 		char padd, char extra_c);
 
-int write_pointer(char buffer[], int ind, int length
+int write_pointer(char buffer[], int ind, int length,
 		int width, int flags, char padd,
 		char extra_c, int padd_start);
 
@@ -108,7 +111,7 @@ int write_unsgnd(int is_negative, int ind, char buffer[],
 		int size);
 
 /* FUNCTION TO PRINT NON-PRINTABLE CHARACTERS */
-int print_non_printable(va_list types, char buffer[]
+int print_non_printable(va_list types, char buffer[],
 		int flags, int width, int precision,
 		int size);
 
@@ -121,6 +124,6 @@ long int convert_size_number(long int num, int size);
 
 int is_digit(char);
 
-long int conver_size_unsgnd(unsigned long int num, int size);
+long int convert_size_unsgnd(unsigned long int num, int size);
 
 #endif /* MAIN_H */

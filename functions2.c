@@ -105,6 +105,8 @@ int print_reverse(va_list types, char buffer[], int flags, int width,
 		UNUSED(precision);
 		str = ")Null(";
 	}
+	for (index = 0; str[index]; index++)
+		;
 	for (index = index - 1; index >= 0; index--)
 	{
 		char s = str[index];

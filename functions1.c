@@ -25,7 +25,7 @@ int print_unsigned(va_list types, char buffer[], int flags,
 		num /= 10;
 	}
 	index++;
-	return (write_unsignd(0, index, buffer, flags, width, precision, size));
+	return (write_unsgnd(0, index, buffer, flags, width, precision, size));
 }
 /**
  * print_octal - Prints an unsigned num in octal
